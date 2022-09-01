@@ -228,4 +228,111 @@ li {
 .bio-img img {
     width: 60%;
     box-shadow: -2rem -2rem 0 0 var(--helper);
+    display: inline-block;
+}
+
+.bio-data-states {
+    display: flex;
+    padding: 5.4rem 0;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.bio-states h3 {
+    margin-bottom: 1rem;
+
+}
+
+.bio-progress-bar {
+    width: 70%;
+    height: 0.8rem;
+    background-color: var(--pera-tint);
+    border-radius: 10rem;
+    position: relative;
+    box-shadow: var(--shadow);
+
+}
+
+.bio-progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: inherit;
+    background: var(--gradient-support1);
+    border-radius: 10rem;
+
+}
+
+.bio-progress::before {
+    width: 70%;
+}
+
+.bio-progress-1::before {
+    width: 99%;
+}
+
+.bio-progress-2::before {
+    width: 60%;
+}
+
+.bio-progress-3::before {
+    width: 50%;
+
+}
+
+.bio-progress-4::before {
+    width: 40%;
+}
+
+.bio-progress-bar span {
+    position: absolute;
+    top: 1.3rem;
+    width: 3rem;
+    height: 1.3rem;
+    background-color: var(--helper);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: 0;
+}
+
+.bio-progress-bar span {
+    left: 75%;
+}
+
+.bio-progress span {
+    left: 66%;
+}
+
+.bio-progress-1 span {
+    left: 95%;
+}
+
+.bio-progress-2 span {
+    left: 56%;
+}
+
+.bio-progress-3 span {
+    left: 46%;
+}
+
+.bio-progress-4 span {
+    left: 36%;
+}
+
+/*  create a caret*/
+.bio-progress-bar span::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0.6rem solid var(--helper);
+    border-color: transparent;
+    border-bottom-color: var(--helper);
+    top: -1rem;
+
 }
