@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,54 +8,66 @@
 }
 
 :root {
-    --heading:rgb(0,10,45);
-    --para:#777;
+    --heading: rgb(0, 10, 45);
+    --heading1: rgb(45, 0, 41);
+    --para: #777;
     --pera-tint: #e4e4e4;
-    --white:#fff;
-    --helper:#8490ff;
-    --helper-tint:#f3f4ff;
-    --bg:rgba(249,249,255);
-    --gradient:linear-gradient(0deg, rgb(132,144,255) 0%, rgb(98,189,252) 100%);
-    --gradient-support: -webkit-linear-gradient(
-        0deg,
-        rgb(132,144,255) 0%,
-        rgb(98,189,252) 100%
-    );
-    --shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
+    --white: #fff;
+    --pink: rgb(243, 91, 116);
+    --helper: #ee4b9c;
+    --helper-tint: #f3f4ff;
+    --bg: rgb(255, 249, 254);
+    --gradient: linear-gradient(0deg, rgb(132, 144, 255) 0%, rgb(98, 189, 252) 100%);
+    --gradient-support: -webkit-linear-gradient(0deg,
+            rgb(132, 144, 255) 0%,
+            rgb(98, 189, 252) 100%);
+    --gradient-support1: -webkit-linear-gradient(0deg,
+            rgb(255, 132, 235) 0%,
+            rgb(234, 62, 240) 100%);
 
+    --shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
+    --box-shadow: 0px 20px 20px 0px rgb(234 62 240 / 30%)
 }
 
-html{
+html {
     font-size: 62.5%;
 
 }
 
-h1,h2,h3,h4{
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Luxurious Roman', cursive;
 }
-h1{
-    color: var(--heading);
+
+h1 {
+    color: var(--heading1);
     font-size: 6rem;
     font-weight: 600;
 }
-h3{
+
+h3 {
     font-size: 1.8rem;
     font-weight: 400;
 }
-p{
+
+p {
     color: var(--para);
     line-height: 1.6;
     font-size: 1.7rem;
 }
-a{
+
+a {
     text-decoration: none;
 }
-li{
+
+li {
     list-style: none;
 }
 
 /* header section start */
-.header{
+.header {
     padding: 0 4.8rem;
     height: 8rem;
     background-color: var(--bg);
@@ -63,18 +76,18 @@ li{
     align-items: center;
 }
 
-.header .logo{
+.header .logo {
     height: 3rem;
     font-size: 2rem;
 }
 
-.navbar-list{
+.navbar-list {
     display: flex;
     gap: 3.8rem;
 }
+
 .navbar-link:link,
-.navbar-link:visited
-{
+.navbar-link:visited {
     display: inline-block;
     font-size: 1.3rem;
     font-weight: 500;
@@ -84,6 +97,94 @@ li{
 }
 
 .navbar-link:hover,
-.navbar-link:after{
+.navbar-link:after {
     color: var(--helper);
+}
+
+
+/* reuseable code */
+.section {
+    padding: 6rem 0;
+}
+
+.grid {
+    display: grid;
+    gap: 6rem;
+}
+
+.grid-two-columns {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.btn {
+    background: var(--gradient-support1);
+    padding: 1.3rem 3rem;
+    border: none;
+    color: var(--helper-tint);
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+
+}
+
+.btn:hover,
+.btn:active {
+    box-shadow: var(--box-shadow);
+}
+
+
+/* hero section start */
+.section-hero {
+    background-color: var(--bg);
+}
+
+.section-hero-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-top-data {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--helper);
+
+}
+
+.hero-heading {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 5rem;
+}
+
+.hero-para {
+    margin-top: 1.4rem;
+    margin-bottom: 3rem;
+    max-width: 60rem;
+}
+
+.section-hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hero-img {
+    max-width: 80%;
+    border-radius: 70%;
+
 }
