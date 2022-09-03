@@ -397,7 +397,7 @@ li {
 
 .img-overlay:hover>.overlay {
     transform: translateY(0);
-    opacity: 0.6;
+    opacity: 0.7;
     cursor: pointer;
 }
 
@@ -407,3 +407,107 @@ li {
     text-decoration: none;
 
 }
+
+/* .p-btn:hover {
+    transform: translateY(-1rem);
+
+} */
+
+.p-btn-active {
+    transform: translateY(-1rem);
+}
+
+/* .p-img-hidden-active {
+    display: none;
+} */
+
+/* work data counter */
+.section-work-data{
+    background: var(--gradient-support1);
+    text-align: center;
+    transition: all 0.7s linear;
+    color: var(--white);
+}
+.counter-numbers{
+    font-size: 3.8rem;
+}
+.section-work-data p{
+    color: var(--white);
+    text-transform: capitalize;
+}
+
+/* our services section start */
+
+.section-services{
+    transition: all 0.7s linear;
+}
+
+.section-services p{
+    max-width: 50rem;
+}
+
+.section-services .grid{
+    margin-top: 10rem;
+    
+}
+
+.service-box{
+   text-align: center;
+   box-shadow: var(--shadow); 
+   border-radius: 5px;
+   padding: 6.4rem 3rem;
+   transition: all 0.2s linear;
+}
+
+.service-box:hover, .service-box:active{
+    transform: translateY(-3rem);
+
+}
+
+.service-icon{
+    width: 7rem;
+    height: 7rem;
+    background-color: rgb(253, 205, 243);
+    display: inline-block;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    padding: 1.3rem 1.6rem;
+    position: relative;
+    color: var(--heading1);
+    animation: water-wave 3s linear infinite;
+}
+
+.service-icon::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    height: 90%;
+    border-radius: 20% 80% 69% 31% / 48% 46% 54% 52% ;
+    background:transparent;
+    border: 1px solid black;
+    animation: water-wave 3s linear infinite;
+}
+
+@keyframes water-wave{
+    0%{
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+
+    }
+    50%{
+       border-radius:  64% 36% 23% 77% / 30% 19% 81% 70% ;
+    }
+    100%{
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+
+    }
+}
+
+.service-box h3{
+    text-transform: capitalize;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bolder;
+}
+
