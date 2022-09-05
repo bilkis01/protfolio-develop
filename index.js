@@ -1,7 +1,7 @@
 // swiper js code
 
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
+    slidesPerView: 2,
     spaceBetween: 30,
     autoplay:{
         delay:2500,
