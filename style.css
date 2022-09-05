@@ -686,3 +686,71 @@ li {
     max-width: 30%;
     border: none;
 }
+
+
+/* section footer */
+
+.section-footer{
+    background: var(--heading1);
+    transition: all 0.6s linear;
+}
+.section-footer h3{
+    color: #e4e4e4;
+    margin-bottom: 3rem;
+
+}
+.f-about p{
+    color: #e4e4e4;
+}
+.f-links ul, .f-services ul, .f-address address{
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    justify-content: center;
+
+}
+
+.f-links li, .f-links a, .f-services li, .f-services a{
+    font-size: 1.4rem;
+    color: #e4e4e4;
+    text-transform: capitalize;
+}
+
+.f-links span,
+.f-services span,
+.f-address span
+{
+  margin-right: 1rem;
+}
+
+.f-services p,
+.f-address p a
+{
+    font-style: normal;
+    color: rgb(192, 189, 189);
+}
+
+.f-social-icons{
+    text-align: center;
+    margin: 4rem 0;
+    color: rgb(184, 178, 178);
+}
+
+.f-social-icons .icons{
+    width: 3rem;
+    height: 3rem;
+    background-color: rgb(170, 164, 164);
+    display: inline-block;
+    padding: 1.4rem 1.8rem;
+    position: relative;
+    color: var(--heading1);
+    animation: water-wave 3s linear infinite;
+}
+
+.f-credits p{
+    text-align: center;
+    color: rgb(184, 178, 178); 
+}
+.footer a:hover, footer a:active{
+    color: var(--white);
+}
