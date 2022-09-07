@@ -1,3 +1,5 @@
+const heroSection = document.querySelector('.section-hero');
+
 // swiper js code
 
 var swiper = new Swiper(".mySwiper", {
@@ -15,7 +17,7 @@ var swiper = new Swiper(".mySwiper", {
 
 // scroll to top button
 
-const heroSection = document.querySelector('.section-hero');
+// const heroSection = document.querySelector('.section-hero'); ....TOP Use
 const footerElement = document.querySelector('.section-footer');
 
 const scrollElement = document.createElement('div');
@@ -53,12 +55,30 @@ counterNum.forEach(element => {
         }
     };
     updateNumber();
-}); 
+});
 
 
+// navbar toggle functionality
 const mobile_nav = document.querySelector('.mobile-navbar-btn');
-const headerEle =  document.querySelector('.header');
+const headerEle = document.querySelector('.header');
 
-mobile_nav.addEventListener('click', ()=>{
+mobile_nav.addEventListener('click', () => {
     headerEle.classList.toggle('active')
-})
+});
+
+
+// sticky navbar functionality
+
+const observer = new IntersectionObserver((entries) => {
+    const ent = entries[0]
+    console.log(ent);
+    !ent.isIntersecting
+        ? document.body.classList.add('sticky')
+        : document.body.classList.remove('sticky')
+},
+    {
+        root: null,
+        threshold: 0,
+    });
+
+observer.observe(heroSection);
