@@ -53,4 +53,12 @@ counterNum.forEach(element => {
         }
     };
     updateNumber();
-});
+}); 
+
+
+const mobile_nav = document.querySelector('.mobile-navbar-btn');
+const headerEle =  document.querySelector('.header');
+
+mobile_nav.addEventListener('click', ()=>{
+    headerEle.classList.toggle('active')
+})
